@@ -32,5 +32,4 @@ class Athlete extends DataObject {
         'Gallery'           => 'Image'
     ];
 }
-
 ?>
