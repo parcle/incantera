@@ -15,7 +15,9 @@ class Video extends DataObject {
         'RareLevel'         => 'RaretyLevel',
         'UploadBy'          => 'SportManager',
         'Image'             => 'Image',
-        'Video'             => 'Image'
+        'Video'             => 'Image',
+        'Country'           => 'Country',
+        'Sport'             => 'Sport'
     ];
 }
 

@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77772505-c72d-4039-906f-ca58b437fd1d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/FamilyDetail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/ImportantAffair.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/ImportantDealDetail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/Merchanize.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportAssociation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportAward.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportAwardOwner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportAwardVersion.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportClub.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportCup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportCupDetail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportCupVersion.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportLeague.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportTournament.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/SportTournamentVersion.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/model/TournamentDetail.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite/code/model/Favourite.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite/code/model/Follow.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/code/model/Athlete.php" afterPath="$PROJECT_DIR$/mysite/code/model/Athlete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/code/model/Video.php" afterPath="$PROJECT_DIR$/mysite/code/model/Video.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +43,10 @@
         <option value="$PROJECT_DIR$/mysite/code/model/SportManager.php" />
         <option value="$PROJECT_DIR$/mysite/code/model/SportTournamentVersion.php" />
         <option value="$PROJECT_DIR$/mysite/code/model/Trainer.php" />
-        <option value="$PROJECT_DIR$/mysite/code/model/Video.php" />
         <option value="$PROJECT_DIR$/mysite/code/model/Athlete.php" />
+        <option value="$PROJECT_DIR$/mysite/code/model/Video.php" />
+        <option value="$PROJECT_DIR$/mysite/code/model/Follow.php" />
+        <option value="$PROJECT_DIR$/mysite/code/model/Favourite.php" />
       </list>
     </option>
   </component>
@@ -253,12 +241,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495087695126</updated>
-      <workItem from="1495087703431" duration="10753000" />
+      <workItem from="1495087703431" duration="12658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10753000" />
+    <option name="totallyTimeSpent" value="12658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -422,14 +410,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/code/model/ImportantDealDetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/Like.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -613,14 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/Video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/code/model/VideoAthleteDetail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -681,6 +653,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/code/model/Like.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/code/model/Favourite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/code/model/Follow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/code/model/Video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding />
         </state>
       </provider>
