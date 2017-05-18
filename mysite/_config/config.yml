@@ -7,5 +7,19 @@ After:
 # YAML configuration for SilverStripe
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
+
+Member:
+  extensions:
+    - RESTMember
+
+# replace files instead of versioning
+Upload:
+  replaceFile: false
+
+# show an overwrite warning
+UploadField:
+  defaultConfig:
+    overwriteWarning: false
+
 SSViewer:
   theme: 'simple'
