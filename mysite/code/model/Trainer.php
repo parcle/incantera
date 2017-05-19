@@ -18,7 +18,8 @@ class Trainer extends DataObject {
         'JobSummary'        => 'Varchar(512)', 
         'JobDescription'    => 'Text', 
         'Position'          => 'Varchar(145)', 
-        'WorkFor'           => 'Enum(array("Team", "Athlete", "Both"))'
+        'WorkFor'           => 'Enum(array("Team", "Athlete", "Both"))',
+        'Status'            => 'Enum(array("Waiting","InProcess","Approved","Rejected"))'
     ];
 
     private static $has_one = [

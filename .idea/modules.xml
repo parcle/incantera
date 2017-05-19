@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/incantera.iml" filepath="$PROJECT_DIR$/.idea/incantera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zeco/.idea/zecoapp.iml" filepath="$PROJECT_DIR$/../zeco/.idea/zecoapp.iml" />
     </modules>
   </component>
 </project>

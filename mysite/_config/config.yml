@@ -8,6 +8,32 @@ After:
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
 
+# Open Routing for Oper Api
+Director:
+  rules:
+    'authapi/v1'        : 'AuthenticationAPI'
+    'profileapi/v1'     : 'MyProfileAPI'
+
+# RestfulAPI config
+AuthenticationAPI:
+  allowed_actions:
+    - postRegistration
+    - postCheckLogin
+    - postForgotPassword
+    - postUpdatePassword
+    - postLogout
+
+MyProfileAPI:
+  allowed_actions:
+    - MyProfile
+    - UpdateProfile
+    - MyPersonalDetails
+    - UpdatePersonalDetails
+    - UploadMyPictures
+    - UpdateMyPictures
+    - DeleteMyPictures
+
+
 Member:
   extensions:
     - RESTMember

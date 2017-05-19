@@ -9,7 +9,8 @@ class RESTMember extends DataExtension {
         'Language'          => 'Varchar(2)',
         'HWID'              => 'Varchar(255)',
         'Timezone'          => 'Int',
-        'DeviceType'        => 'Int'
+        'DeviceType'        => 'Int',
+        'MemberType'        => 'Enum(array("Manager","Attorney","Trainer","Athlete","General"))'
     );
 
     public function createRestToken() {

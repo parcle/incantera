@@ -17,7 +17,8 @@ class Athlete extends DataObject {
         'OfficialMobile'    => 'Varchar(45)', 
         'JobSummary'        => 'Varchar(512)', 
         'JobDescription'    => 'Text', 
-        'Position'          => 'Varchar(145)'
+        'Position'          => 'Varchar(145)',
+        'Status'            => 'Enum(array("Waiting","InProcess","Approved","Rejected"))'
     ];
 
     private static $has_one = [

@@ -19,7 +19,8 @@ class SportManager extends DataObject {
         'JobDescription'    => 'Text', 
         'Position'          => 'Varchar(145)', 
         'WorkFor'           => 'Enum(array("Team", "Athlete", "Both"))', 
-        'Salary'            => 'Enum(array("Fixed", "Commision", "Hybrid"))'
+        'Salary'            => 'Enum(array("Fixed", "Commision", "Hybrid"))',
+        'Status'            => 'Enum(array("Waiting","InProcess","Approved","Rejected"))'
     ];
 
     private static $has_one = [

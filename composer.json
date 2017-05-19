@@ -7,7 +7,14 @@
 		"silverstripe/framework": "3.5.3",
 		"silverstripe/reports": "3.5.3",
 		"silverstripe/siteconfig": "3.5.3",
-		"silverstripe-themes/simple": "3.1.*"
+		"silverstripe-themes/simple": "3.1.*",
+		"wilr/silverstripe-facebookconnect": "dev-master",
+		"guzzlehttp/guzzle": "dev-master",
+		"facebook/php-sdk-v4": "@stable",
+		"php-ffmpeg/php-ffmpeg": "~0.5",
+		"b-b3rn4rd/phplame": "dev-master",
+		"phpmailer/phpmailer": "~5.2",
+		"pelago/emogrifier": "@dev"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
