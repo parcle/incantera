@@ -4,9 +4,9 @@ class SportAttorney extends DataObject {
     private static $db = [
         'Title'             => 'Varchar(145)', 
         'BusineesName'      => 'Varchar(145)',
-        'Gender'            => 'Enum(array("Male", "Female", "Unknown"))', 
+        'Gender'            => 'Enum(array("None", "Male", "Female", "Unknown"))',
         'BirthDate'         => 'Date', 
-        'MarritalStatus'    => 'Enum(array("Yes", "No"))', 
+        'MarritalStatus'    => 'Enum(array("None", "Yes", "No"))',
         'MarriageDate'      => 'Date', 
         'WebsiteURL'        => 'Varchar(145)', 
         'Address'           => 'Varchar(255)', 
@@ -18,8 +18,8 @@ class SportAttorney extends DataObject {
         'JobSummary'        => 'Varchar(512)', 
         'JobDescription'    => 'Text', 
         'Position'          => 'Varchar(145)', 
-        'WorkFor'           => 'Enum(array("Team", "Athlete", "Both"))', 
-        'Salary'            => 'Enum(array("Fixed", "Commision", "Hybrid"))',
+        'WorkFor'           => 'Enum(array("None", "Team", "Athlete", "Both"))',
+        'Salary'            => 'Enum(array("None", "Fixed", "Commision", "Hybrid"))',
         'Status'            => 'Enum(array("Waiting","InProcess","Approved","Rejected"))'
     ];
 

@@ -13,6 +13,7 @@ Director:
   rules:
     'authapi/v1'        : 'AuthenticationAPI'
     'profileapi/v1'     : 'MyProfileAPI'
+    'personalapi/v1'    : 'MyPersonalDetailsAPI'
 
 # RestfulAPI config
 AuthenticationAPI:
@@ -33,6 +34,18 @@ MyProfileAPI:
     - UpdateMyPictures
     - DeleteMyPictures
 
+MyPersonalDetailsAPI:
+  allowed_actions:
+    - postManagerDetails
+    - postUpdateManagerDetails
+    - postAttorneyDetails
+    - postUpdateAttorneyDetails
+    - postTrainerDetails
+    - postUpdateTrainerDetails
+    - postAthleteDetails
+    - postUpdateAthleteDetails
+    - postGeneralDetails
+    - postUpdateGeneralDetails
 
 Member:
   extensions:

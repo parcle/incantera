@@ -2,7 +2,7 @@
 class RESTMember extends DataExtension {
 
     private static $db = array (
-        'LastName'          => 'Varchar(90)',
+        'MiddleName'        => 'Varchar(90)',
         'RESTToken'         => 'Varchar(64)',
         'RESTTokenExpiry'   => 'SS_DateTime',
         'PushToken'         => 'Varchar(255)',
@@ -10,7 +10,7 @@ class RESTMember extends DataExtension {
         'HWID'              => 'Varchar(255)',
         'Timezone'          => 'Int',
         'DeviceType'        => 'Int',
-        'MemberType'        => 'Enum(array("Manager","Attorney","Trainer","Athlete","General"))'
+        'MemberType'        => 'Enum(array("None", "Manager","Attorney","Trainer","Athlete","General"))'
     );
 
     public function createRestToken() {
