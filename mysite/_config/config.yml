@@ -14,6 +14,8 @@ Director:
     'authapi/v1'        : 'AuthenticationAPI'
     'profileapi/v1'     : 'MyProfileAPI'
     'personalapi/v1'    : 'MyPersonalDetailsAPI'
+    'mysportapi/v1'     : 'MySportAPI'
+    'myeducationapi/v1' : 'MyEducationAPI'
 
 # RestfulAPI config
 AuthenticationAPI:
@@ -46,6 +48,23 @@ MyPersonalDetailsAPI:
     - postUpdateAthleteDetails
     - postGeneralDetails
     - postUpdateGeneralDetails
+
+MySportAPI:
+  allowed_actions:
+    - postMySportsList
+    - postAddMySports
+    - postGetMySportDetails
+    - postUpdateMySports
+    - postDeleteMySports
+
+MyEducationAPI:
+  allowed_actions:
+    - postEducationList
+    - postAddEductionDetails
+    - postEditEducationDetails
+    - postUpdateEducationDetails
+    - postDeleteEducationDetails
+
 
 Member:
   extensions:

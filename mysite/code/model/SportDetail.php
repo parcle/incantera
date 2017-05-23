@@ -8,6 +8,7 @@ class SportDetail extends DataObject {
     ];
 
     private static $has_one = [
+        'Sport'             => 'Sport', 
         'SportManager'      => 'SportManager', 
         'SportAttorney'     => 'SportAttorney', 
         'Trainer'           => 'Trainer', 

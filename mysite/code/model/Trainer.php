@@ -3,7 +3,7 @@
 class Trainer extends DataObject {
     private static $db = [
         'Title'             => 'Varchar(145)', 
-        'BusineesName'      => 'Varchar(145)',
+        'BusinessName'      => 'Varchar(145)',
         'Gender'            => 'Enum(array("None", "Male", "Female", "Unknown"))',
         'BirthDate'         => 'Date', 
         'MarritalStatus'    => 'Enum(array("None", "Yes", "No"))',
