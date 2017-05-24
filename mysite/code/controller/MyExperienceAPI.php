@@ -9,18 +9,18 @@ use Lame\Settings;
  * Date: 20/05/2017
  * Time: 11:40 PM
  */
-class MyEducationAPI extends Controller {
+class MyExperienceAPI extends Controller {
  
     private static $allowed_actions = [
-        'postEducationList', 
-        'postAddEductionDetails', 
-        'postEditEducationDetails', 
-        'postUpdateEducationDetails', 
-        'postDeleteEducationDetails'
+        'postExperienceList', 
+        'postAddExperienceDetails', 
+        'postEditExperienceDetails', 
+        'postUpdateExperienceDetails', 
+        'postDeleteExperienceDetails'
     ];
 
     public function Link($action = null) {
-        return Controller::join_links("personalapi", "v1", $action);
+        return Controller::join_links("myexperienceapi", "v1", $action);
     }
 
     /**
@@ -64,13 +64,6 @@ class MyEducationAPI extends Controller {
         }
     }
 
-    /**
-     * @name        getUserRole
-     * @param       $token
-     * @return      mixed|string
-     * @description This function is used to get User Role details
-     * @internal    $role
-     */
     private function getUserRole($token) {
         try {
             $role = '';
@@ -86,32 +79,23 @@ class MyEducationAPI extends Controller {
         }
     }
 
-    /**
-     * @name        checkDataValidation
-     * @param       $req
-     * @param       $response
-     * @return      mixed
-     * @description This function is used to check data validation
-     * @internal    $degree_name
-     * @internal    $college_name
-     */
     private function checkDataValidation($req, $response) {
         try {
-            $degree_name            = $req->requestVar('degree_name');
-            $college_name           = $req->requestVar('college_name');
+            $working_title            = $req->requestVar('working_title');
+            $organization_name        = $req->requestVar('organization_name');
 
             //Set default variable with default values
             $error_flg  = true;
             $messages   = [];
 
-            if($degree_name =='') {
+            if($working_title =='') {
                 $error_flg = false;
-                $messages['degree_name'] = 'Degree Name is required field.';
+                $messages['working_title'] = 'Working Title is required field.';
             }
 
-            if($college_name =='') {
+            if($organization_name =='') {
                 $error_flg = false;
-                $messages['college_name'] = 'College Name is required field.';
+                $messages['organization_name'] = 'Organization Name is required field.';
             }
 
             //If error_flg is false then any of parameter is not valid then returns error messages with reason.
@@ -128,8 +112,7 @@ class MyEducationAPI extends Controller {
         }
     }
 
-
-    public function postEducationList(SS_HTTPRequest $req) {
+    public function postExperienceList(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
 
@@ -159,29 +142,29 @@ class MyEducationAPI extends Controller {
             if($role=='Manager') {
                 $manager = SportManager::get()->filter('MemberID', $member->ID)->first();
 
-                $list = EducationDetail::get()->filter('SportManagerID', $manager->ID);
+                $list = ExperienceDetail::get()->filter('SportManagerID', $manager->ID);
             } else if($role == 'Attorney' ) {
                 $attorney = SportAttorney::get()->filter('MemberID', $member->ID)->first();
 
-                $list = EducationDetail::get()->filter('SportManagerID', $attorney->ID);
+                $list = ExperienceDetail::get()->filter('SportManagerID', $attorney->ID);
             } else if($role == 'Trainer' ) {
                 $trainer = Trainer::get()->filter('MemberID', $member->ID)->first();
 
-                $list = EducationDetail::get()->filter('SportManagerID', $trainer->ID);
+                $list = ExperienceDetail::get()->filter('SportManagerID', $trainer->ID);
             } else if($role == 'Athlete' ) {
-                $athlete = Athlete::get()->filter('MemberID', $member->ID)->first();
-
-                $list = EducationDetail::get()->filter('SportManagerID', $athlete->ID);
+                $response['error_reason']   = 'AccessDenied';
+                $response['error_messages'] = 'You cannot add Experience Details. It is only allow for Sport Manager, Sport Attorney or Trainer.';
+                return new SS_HTTPResponse(Convert::array2json($response), 200);
             }
             if($list->count() > 0 ) {
                 foreach($list AS $record) {
                     $education_list[] = [
-                        'ID'            => $record->ID,
-                        'DegreeName'    => $record->DegreeName, 
-                        'CollegeName'   => $record->CollegeName, 
-                        'PassoutYear'   => $record->PassoutYear, 
-                        'PassClass'     => $record->PassClass, 
-                        'Percentage'    => $record->Percentage
+                        'ID'                => $record->ID,
+                        'WorkingTitle'      => $record->WorkingTitle, 
+                        'OrganizationName'  => $record->OrganizationName, 
+                        'CurrentJob'        => $record->CurrentJob, 
+                        'StartDate'         => date('d-m-Y', strtotime($record->StartDate)), 
+                        'EndDate'           => date('d-m-Y', strtotime($record->EndDate))
                     ];
                 }
             }
@@ -205,7 +188,7 @@ class MyEducationAPI extends Controller {
         }
     }
 
-    public function postAddEductionDetails(SS_HTTPRequest $req) {
+    public function postAddExperienceDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
 
@@ -213,11 +196,11 @@ class MyEducationAPI extends Controller {
 
             //First get all passed parameters in different related variables.
             $token              = $req->requestVar('_token');
-            $degree_name        = $req->requestVar('degree_name');
-            $college_name       = $req->requestVar('college_name');
-            $pass_year          = $req->requestVar('pass_year');
-            $pass_class         = $req->requestVar('pass_class');
-            $percentage         = $req->requestVar('percentage');
+            $working_title      = $req->requestVar('working_title');
+            $organization_name   = $req->requestVar('organization_name');
+            $current_job        = $req->requestVar('current_job');
+            $start_date         = $req->requestVar('start_date');
+            $end_date           = $req->requestVar('end_date  ');
 
             //Define default variables and related json values in json format.
             $response = [   'process_status'    => false,
@@ -248,32 +231,30 @@ class MyEducationAPI extends Controller {
                 //Before insert new record in SportDetail first we will check is user already have this sport or not.
                 $manager = SportManager::get()->filter('MemberID', $member->ID)->first();
 
-                $details = EducationDetail::create();
+                $details = ExperienceDetail::create();
                 $details->SportManagerID    = $manager->ID;
             } else if($role == 'Attorney' ) {
                 //Before insert new record in SportDetail first we will check is user already have this sport or not.
                 $attorney = SportAttorney::get()->filter('MemberID', $member->ID)->first();
 
-                $details = EducationDetail::create();
+                $details = ExperienceDetail::create();
                 $details->SportAttorneyID   = $attorney->ID;
             } else if($role == 'Trainer' ) {
                 //Before insert new record in SportDetail first we will check is user already have this sport or not.
                 $trainer = Trainer::get()->filter('MemberID', $member->ID)->first();
 
-                $details = EducationDetail::create();
+                $details = ExperienceDetail::create();
                 $details->TrainerID   = $trainer->ID;
             } else if($role == 'Athlete' ) {
-                //Before insert new record in SportDetail first we will check is user already have this sport or not.
-                $athlete = Athlete::get()->filter('MemberID', $member->ID)->first();
-
-                $details = EducationDetail::create();
-                $details->AthleteID   = $athlete->ID;
+                $response['error_reason']   = 'AccessDenied';
+                $response['error_messages'] = 'You cannot add Experience Details. It is only allow for Sport Manager, Sport Attorney or Trainer.';
+                return new SS_HTTPResponse(Convert::array2json($response), 200);
             }
-            $details->DegreeName        = $degree_name;
-            $details->CollegeName       = $college_name;
-            $details->PassoutYear       = $pass_year;
-            $details->PassClass         = $pass_class;
-            $details->Percentage        = $percentage;
+            $details->WorkingTitle      = $working_title;
+            $details->OrganizationName  = $organization_name;
+            $details->CurrentJob        = $current_job;
+            $details->StartDate         = date('Y-m-d', strtotime($start_date));
+            $details->EndDate           = date('Y-m-d', strtotime($end_date));
             $details->write();
 
             //Set process_status = true and returns success response in json format.
@@ -292,7 +273,7 @@ class MyEducationAPI extends Controller {
         }
     }
 
-    public function postEditEducationDetails(SS_HTTPRequest $req) {
+    public function postEditExperienceDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
 
@@ -316,19 +297,19 @@ class MyEducationAPI extends Controller {
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
             }
 
-            if(!$record = EducationDetail::get()->filter("ID", $record_id)->first()) {
+            if(!$record = ExperienceDetail::get()->filter("ID", $record_id)->first()) {
                 $response['error_reason']   = 'InvalidData';
                 $response['error_messages'] = [ 'record_id' => 'Id which you passed in rquest is not valid. Please try agian.' ];
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
             }
 
-            $response['response_data']['education_details'] = [
-                        'ID'            => $record->ID,
-                        'DegreeName'    => $record->DegreeName, 
-                        'CollegeName'   => $record->CollegeName, 
-                        'PassoutYear'   => $record->PassoutYear, 
-                        'PassClass'     => $record->PassClass, 
-                        'Percentage'    => $record->Percentage
+            $response['response_data']['experience_details'] = [
+                        'ID'                => $record->ID,
+                        'WorkingTitle'      => $record->WorkingTitle, 
+                        'OrganizationName'  => $record->OrganizationName, 
+                        'CurrentJob'        => $record->CurrentJob, 
+                        'StartDate'         => date('d-m-Y', strtotime($record->StartDate)), 
+                        'EndDate'           => date('d-m-Y', strtotime($record->EndDate))
                     ];
 
             //Set process_status = true and returns success response in json format.
@@ -347,7 +328,7 @@ class MyEducationAPI extends Controller {
         }
     }
 
-    public function postUpdateEducationDetails(SS_HTTPRequest $req) {
+    public function postUpdateExperienceDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
 
@@ -356,11 +337,11 @@ class MyEducationAPI extends Controller {
             //First get all passed parameters in different related variables.
             $token              = $req->requestVar('_token');
             $record_id          = $req->requestVar('record_id');
-            $degree_name        = $req->requestVar('degree_name');
-            $college_name       = $req->requestVar('college_name');
-            $pass_year          = $req->requestVar('pass_year');
-            $pass_class         = $req->requestVar('pass_class');
-            $percentage         = $req->requestVar('percentage');
+            $working_title      = $req->requestVar('working_title');
+            $organization_name   = $req->requestVar('organization_name');
+            $current_job        = $req->requestVar('current_job');
+            $start_date         = $req->requestVar('start_date');
+            $end_date           = $req->requestVar('end_date  ');
 
             //Define default variables and related json values in json format.
             $response = [   'process_status'    => false,
@@ -386,7 +367,7 @@ class MyEducationAPI extends Controller {
 
             $member = Member::get()->filter("RESTToken", Convert::raw2sql($token))->first();
 
-            $record = EducationDetail::get()->filter("ID", $record_id)->first();
+            $record = ExperienceDetail::get()->filter("ID", $record_id)->first();
             $record->DegreeName        = $degree_name;
             $record->CollegeName       = $college_name;
             $record->PassoutYear       = $pass_year;
@@ -410,7 +391,7 @@ class MyEducationAPI extends Controller {
         }
     }
 
-    public function postDeleteEducationDetails(SS_HTTPRequest $req) {
+    public function postDeleteExperienceDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
 
@@ -436,7 +417,7 @@ class MyEducationAPI extends Controller {
 
             $member = Member::get()->filter("RESTToken", Convert::raw2sql($token))->first();
 
-            if(!$record = EducationDetail::get()->filter("ID", $record_id)->first()) {
+            if(!$record = ExperienceDetail::get()->filter("ID", $record_id)->first()) {
                 $response['error_reason']   = 'InvalidData';
                 $response['error_messages'] = [ 'record_id' => 'Id which you passed in rquest is not valid. Please try agian.' ];
                 return new SS_HTTPResponse(Convert::array2json($response), 200);

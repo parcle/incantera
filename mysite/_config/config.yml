@@ -16,6 +16,7 @@ Director:
     'personalapi/v1'    : 'MyPersonalDetailsAPI'
     'mysportapi/v1'     : 'MySportAPI'
     'myeducationapi/v1' : 'MyEducationAPI'
+    'myexperienceapi/v1': 'MyExperienceAPI'
 
 # RestfulAPI config
 AuthenticationAPI:
@@ -64,6 +65,15 @@ MyEducationAPI:
     - postEditEducationDetails
     - postUpdateEducationDetails
     - postDeleteEducationDetails
+
+MyExperienceAPI:
+  allowed_actions:
+    - postExperienceList
+    - postAddExperienceDetails
+    - postEditExperienceDetails
+    - postUpdateExperienceDetails
+    - postDeleteExperienceDetails
+
 
 
 Member:
