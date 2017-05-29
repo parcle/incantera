@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77772505-c72d-4039-906f-ca58b437fd1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/document/EducationAPI.odt" afterPath="$PROJECT_DIR$/document/EducationAPI.odt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/_config/config.yml" afterPath="$PROJECT_DIR$/mysite/_config/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/code/controller/MyEducationAPI.php" afterPath="$PROJECT_DIR$/mysite/code/controller/MyEducationAPI.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zeco/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../zeco/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zeco/mysite/_config/config.yml" afterPath="$PROJECT_DIR$/../zeco/mysite/_config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/_config/config.yml" afterPath="$PROJECT_DIR$/mysite/_config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/incantera.iml" afterPath="$PROJECT_DIR$/.idea/incantera.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zeco/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../zeco/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,25 +20,105 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AuthenticationAPI.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/code/controller/AuthenticationAPI.php">
+      <file leaf-file-name="EBookPage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/controller/EBookPage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1853">
+              <caret line="109" column="5" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="109" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Navigation.ss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Includes/Navigation.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2448">
+              <caret line="144" column="96" lean-forward="false" selection-start-line="144" selection-start-column="96" selection-end-line="144" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EbookViewer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/controller/EbookViewer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
-              <caret line="62" column="101" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="101" />
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EbookViewer.ss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Layout/EbookViewer.ss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding>
-                <element signature="e#7#21#0#PHP" expanded="true" />
+                <marker date="1495811597040" expanded="true" signature="574:1265" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="625:1255" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="639:1083" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="693:1068" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="709:1046" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="717:1039" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="743:1029" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="1097:1244" ph="..." />
+                <marker date="1495811597040" expanded="true" signature="1151:1229" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyEducationAPI.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysite/code/controller/MyEducationAPI.php">
+      <file leaf-file-name="CelebBook.ss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Includes/CelebBook.ss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="132" column="59" lean-forward="true" selection-start-line="132" selection-start-column="59" selection-end-line="132" selection-end-column="59" />
+            <state relative-caret-position="102">
+              <caret line="6" column="130" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="130" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/_config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/controller/Page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3842">
+              <caret line="228" column="5" lean-forward="false" selection-start-line="228" selection-start-column="5" selection-end-line="228" selection-end-column="5" />
               <folding>
-                <element signature="n#checkToken#0;n#MyEducationAPI#0;n#!!top" expanded="false" />
+                <element signature="n#getLocales#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#register#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#setRankingFive#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#setRanking#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#setOnEbook#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#setSelected#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#setOnTop#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#setEvidenza#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#setPending#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#yourFask#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#NewNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#submitSpecialNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#yourNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#submitTheFask#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#submitTheComment#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#submitTheNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#submitTheFanswer#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#getStars#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#likeTheFask#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#sendChatText#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#getLiveChatFeed#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#getNotLoggedChatForm#0;n#Page_Controller#0;n#!!top" expanded="false" />
+                <element signature="n#getChatForm#0;n#Page_Controller#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -48,6 +130,11 @@
     <findStrings>
       <find>$trainer</find>
       <find>$athlete</find>
+      <find>StarSlider</find>
+      <find>BookSlider</find>
+      <find>PAge_contr</find>
+      <find>EBOOK</find>
+      <find>I Libri già realizzati delle nostre celebrities</find>
     </findStrings>
     <replaceStrings>
       <replace>$athlete</replace>
@@ -55,7 +142,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../zeco" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -93,6 +180,12 @@
         <option value="$PROJECT_DIR$/mysite/code/controller/MyPersonalDetailsAPI.php" />
         <option value="$PROJECT_DIR$/mysite/code/controller/MySportAPI.php" />
         <option value="$PROJECT_DIR$/mysite/code/controller/MyEducationAPI.php" />
+        <option value="$PROJECT_DIR$/../efanswer-development/mysite/_config/config.yml" />
+        <option value="$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Includes/Navigation.ss" />
+        <option value="$PROJECT_DIR$/../efanswer-development/mysite/code/controller/Page.php" />
+        <option value="$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Layout/EBookPage.ss" />
+        <option value="$PROJECT_DIR$/../efanswer-development/mysite/code/controller/EbookViewer.php" />
+        <option value="$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Layout/EbookViewer.ss" />
       </list>
     </option>
   </component>
@@ -104,9 +197,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1377" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -135,7 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="incantera" />
+              <option name="myItemId" value="efanswer-development" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -145,7 +239,99 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer-development" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="incantera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer-development" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="incantera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer-development" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Includes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="incantera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer-development" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="incantera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer-development" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -159,7 +345,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="incantera" />
+              <option name="myItemId" value="efanswer-development" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -177,7 +363,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="incantera" />
+              <option name="myItemId" value="efanswer-development" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -199,7 +385,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="incantera" />
+              <option name="myItemId" value="efanswer-development" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -221,7 +407,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer-development" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysite" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="incantera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="efanswer-development" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -342,18 +550,21 @@
       <workItem from="1495461357675" duration="560000" />
       <workItem from="1495463702727" duration="645000" />
       <workItem from="1495524292206" duration="51000" />
-      <workItem from="1495614555215" duration="156000" />
+      <workItem from="1495614555215" duration="753000" />
+      <workItem from="1495652693184" duration="1273000" />
+      <workItem from="1495718328901" duration="634000" />
+      <workItem from="1495719007848" duration="9998000" />
+      <workItem from="1496059460299" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63666000" />
+    <option name="totallyTimeSpent" value="76170000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1377" height="735" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22997795" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22913617" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -380,72 +591,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/ImportantDealDetail.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/Merchandize.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/MerchandizeBadgeReq.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/Notification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/PointWallet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/RaretyLevel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportAssociation.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportAttribute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportAttributeGroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportAward.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportAwardOwner.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportAwardVersion.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportClub.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportCup.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportCupVersion.php" />
-    <entry file="file://$PROJECT_DIR$/mysite/code/model/SportLeague.php" />
     <entry file="file://$PROJECT_DIR$/mysite/code/model/SportTournament.php" />
     <entry file="file://$PROJECT_DIR$/mysite/code/model/SportTournamentVersion.php" />
     <entry file="file://$PROJECT_DIR$/mysite/code/model/TournamentDetail.php" />
@@ -496,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -512,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -534,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,7 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,12 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="125" column="30" lean-forward="false" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="30" />
-          <folding>
-            <element signature="e#7#21#0#PHP" expanded="false" />
-            <element signature="n#postMyPictures#0;n#MyProfileAPI#0;n#!!top" expanded="false" />
-            <element signature="n#postUploadMyPictures#0;n#MyProfileAPI#0;n#!!top" expanded="false" />
-            <element signature="n#postDeleteMyPictures#0;n#MyProfileAPI#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="12" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -628,7 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="100" lean-forward="false" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="100" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -636,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,20 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4556">
           <caret line="496" column="81" lean-forward="false" selection-start-line="496" selection-start-column="81" selection-end-line="496" selection-end-column="81" />
-          <folding>
-            <element signature="e#7#21#0#PHP" expanded="true" />
-            <element signature="n#checkToken#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#checkRole#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#getCountryList#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#getAthleteLevelList#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#getGenderList#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#getWorkForList#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#getSalaryList#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#getSportList#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#checkGeneralDataValidation#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <element signature="n#checkTrainerDataValidation#0;n#MyPersonalDetailsAPI#0;n#!!top" expanded="false" />
-            <marker date="1495471047037" expanded="true" signature="38628:38849" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -673,11 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="222" column="49" lean-forward="false" selection-start-line="222" selection-start-column="49" selection-end-line="222" selection-end-column="49" />
-          <folding>
-            <marker date="1495568198612" expanded="true" signature="2153:2946" ph="..." />
-            <marker date="1495568198612" expanded="true" signature="2167:2946" ph="..." />
-            <marker date="1495568198612" expanded="true" signature="2844:2946" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,26 +800,166 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/controller/AuthenticationAPI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="62" column="101" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="101" />
-          <folding>
-            <element signature="e#7#21#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/code/controller/MyEducationAPI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="132" column="59" lean-forward="true" selection-start-line="132" selection-start-column="59" selection-end-line="132" selection-end-column="59" />
+        <state relative-caret-position="17">
+          <caret line="302" column="30" lean-forward="false" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/code/controller/AuthenticationAPI.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="62" column="101" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zeco/mysite/code/controller/StarPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/controller/StarPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2072">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/model/Star.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/model/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/model/BookLink.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/_config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/controller/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3842">
+          <caret line="228" column="5" lean-forward="false" selection-start-line="228" selection-start-column="5" selection-end-line="228" selection-end-column="5" />
           <folding>
-            <element signature="n#checkToken#0;n#MyEducationAPI#0;n#!!top" expanded="false" />
+            <element signature="n#getLocales#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#register#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#setRankingFive#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#setRanking#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#setOnEbook#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#setSelected#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#setOnTop#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#setEvidenza#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#setPending#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#yourFask#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#NewNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#submitSpecialNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#yourNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#submitTheFask#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#submitTheComment#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#submitTheNews#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#submitTheFanswer#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getStars#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#likeTheFask#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sendChatText#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getLiveChatFeed#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getNotLoggedChatForm#0;n#Page_Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getChatForm#0;n#Page_Controller#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Includes/CelebBook.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="130" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Includes/Navigation.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="144" column="96" lean-forward="false" selection-start-line="144" selection-start-column="96" selection-end-line="144" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/controller/EBookPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="5" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="109" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Layout/EtooLanding.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Layout/EbookViewer.ss.php" />
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Layout/EBookPage.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1418">
+          <caret line="112" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="513" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/mysite/code/controller/EbookViewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../efanswer-development/themes/efanswer/templates/Layout/EbookViewer.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <marker date="1495811597040" expanded="true" signature="574:1265" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="625:1255" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="639:1083" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="693:1068" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="709:1046" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="717:1039" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="743:1029" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="1097:1244" ph="..." />
+            <marker date="1495811597040" expanded="true" signature="1151:1229" ph="..." />
           </folding>
         </state>
       </provider>

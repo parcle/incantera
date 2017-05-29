@@ -128,7 +128,13 @@ class MyEducationAPI extends Controller {
         }
     }
 
-
+    /**
+     * @name        postEducationList
+     * @param       SS_HTTPRequest $req
+     * @return      SS_HTTPResponse|void
+     * @description This functon is used to get list of Education details of logged in user.
+     * @internal    $_token
+     */
     public function postEducationList(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
@@ -152,9 +158,11 @@ class MyEducationAPI extends Controller {
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
             }
 
+            //Get Member record and Role of user.
             $member = Member::get()->filter("RESTToken", Convert::raw2sql($token))->first();
             $role   = $this->getUserRole($token);
 
+            //Get list of record from Role of user.
             $education_list = [];
             if($role=='Manager') {
                 $manager = SportManager::get()->filter('MemberID', $member->ID)->first();
@@ -173,6 +181,8 @@ class MyEducationAPI extends Controller {
 
                 $list = EducationDetail::get()->filter('SportManagerID', $athlete->ID);
             }
+
+            //Loop through list of records and create array as we required.
             if($list->count() > 0 ) {
                 foreach($list AS $record) {
                     $education_list[] = [
@@ -186,7 +196,7 @@ class MyEducationAPI extends Controller {
                 }
             }
 
-
+            //Store result array in response data array.
             $response['response_data']['education_list'] = $education_list;
 
             //Set process_status = true and returns success response in json format.
@@ -205,6 +215,18 @@ class MyEducationAPI extends Controller {
         }
     }
 
+    /**
+     * @name        postAddEducationDetails
+     * @param       SS_HTTPRequest $req
+     * @return      SS_HTTPResponse|void
+     * @description This function is used to save New Education details of current logged in user.
+     * @internal    $_token
+     * @internal    $degree_name
+     * @internal    $college_name
+     * @internal    $pass_year
+     * @internal    $pass_class
+     * @internal    $percentage
+     */
     public function postAddEductionDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
@@ -241,9 +263,11 @@ class MyEducationAPI extends Controller {
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
             }
 
+            //Get Member record and Role of user.
             $member = Member::get()->filter("RESTToken", Convert::raw2sql($token))->first();
             $role   = $this->getUserRole($token);
 
+            //Check User role and create related record in table with related details.
             if( $role == 'Manager' ) {
                 //Before insert new record in SportDetail first we will check is user already have this sport or not.
                 $manager = SportManager::get()->filter('MemberID', $member->ID)->first();
@@ -269,6 +293,8 @@ class MyEducationAPI extends Controller {
                 $details = EducationDetail::create();
                 $details->AthleteID   = $athlete->ID;
             }
+
+            //Assign common details to object.
             $details->DegreeName        = $degree_name;
             $details->CollegeName       = $college_name;
             $details->PassoutYear       = $pass_year;
@@ -292,6 +318,14 @@ class MyEducationAPI extends Controller {
         }
     }
 
+    /**
+     * @name        postEditEducationDetails
+     * @param       SS_HTTPRequest $req
+     * @return      SS_HTTPResponse|void
+     * @description This function is used to Get Education details for update form.
+     * @internal    $_token
+     * @internal    $record_id
+     */
     public function postEditEducationDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
@@ -347,6 +381,19 @@ class MyEducationAPI extends Controller {
         }
     }
 
+    /**
+     * @name        postUpdateEducationDetails
+     * @param       SS_HTTPRequest $req
+     * @return      SS_HTTPResponse|void
+     * @description This function is used to update education details in database.
+     * @internal    $_token
+     * @internal    $record_id
+     * @internal    $degree_name
+     * @internal    $college_name
+     * @internal    $pass_year
+     * @internal    $pass_class
+     * @internal    $percentage
+     */
     public function postUpdateEducationDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
@@ -410,6 +457,14 @@ class MyEducationAPI extends Controller {
         }
     }
 
+    /**
+     * @name        postDeleteEducationDetails
+     * @param       SS_HTTPRequest $req
+     * @return      SS_HTTPResponse|void
+     * @description This function is used to delete Education details of Logged in user.
+     * @internal    $_token
+     * @internal    $record_id
+     */
     public function postDeleteEducationDetails(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);

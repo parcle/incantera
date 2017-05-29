@@ -11,12 +11,14 @@ After:
 # Open Routing for Oper Api
 Director:
   rules:
-    'authapi/v1'        : 'AuthenticationAPI'
-    'profileapi/v1'     : 'MyProfileAPI'
-    'personalapi/v1'    : 'MyPersonalDetailsAPI'
-    'mysportapi/v1'     : 'MySportAPI'
-    'myeducationapi/v1' : 'MyEducationAPI'
-    'myexperienceapi/v1': 'MyExperienceAPI'
+    'authapi/v1'            : 'AuthenticationAPI'
+    'profileapi/v1'         : 'MyProfileAPI'
+    'personalapi/v1'        : 'MyPersonalDetailsAPI'
+    'mysportapi/v1'         : 'MySportAPI'
+    'myeducationapi/v1'     : 'MyEducationAPI'
+    'myexperienceapi/v1'    : 'MyExperienceAPI'
+    'athleterequestapi/v1'  : 'MyAthleteRequestAPI'
+    'requestapi/v1'         : 'MyRequestAPI'
 
 # RestfulAPI config
 AuthenticationAPI:
@@ -74,7 +76,19 @@ MyExperienceAPI:
     - postUpdateExperienceDetails
     - postDeleteExperienceDetails
 
+MyRequestAPI:
+  allowed_actions:
+    - postMyRequestsList
+    - postAcceptRequests
+    - postRejectRequests
+    - postBlockRequests
+    - postReportAbuseRequests
 
+MyAthleteRequestAPI:
+  allowed_actions:
+    - postGetAthleteRequests
+    - postSendRequestToAthlete
+    - postDeleteAthlete
 
 Member:
   extensions:

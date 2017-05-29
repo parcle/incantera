@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../efanswer-development/.idea/efanswer-development.iml" filepath="$PROJECT_DIR$/../efanswer-development/.idea/efanswer-development.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/incantera.iml" filepath="$PROJECT_DIR$/.idea/incantera.iml" />
       <module fileurl="file://$PROJECT_DIR$/../zeco/.idea/zecoapp.iml" filepath="$PROJECT_DIR$/../zeco/.idea/zecoapp.iml" />
     </modules>
