@@ -15,5 +15,9 @@ class AthleteRequest extends DataObject {
         'SportAttorney'     => 'SportAttorney', 
         'Trainer'           => 'Trainer'
     ];
+
+    private static $has_many = [
+        'RequestStatus'     => 'AthleteRequestStatusDetail'
+    ];
 }
 ?>

@@ -79,6 +79,35 @@ class MyRequestAPI extends Controller {
         }
     }
 
+    private function checkDataValidation($req, $response) {
+        try {
+            $request_id = $req->requestVar('request_id');
+
+            $error_flg  = true;
+            $messages   = [];
+
+            if($request_id =='') {
+                $error_flg = false;
+                $messages['request_id'] = 'Request ID is required field.';
+            } else if(!$request = AthleteRequest::get()->filter("ID", $request_id)->first()) {
+                $error_flg = false;
+                $messages['request_id'] = 'Request ID is not valid value.';
+            }
+
+            //If error_flg is false then any of parameter is not valid then returns error messages with reason.
+            if($error_flg===false) {
+                $response['error_reason']   = 'InvalidData';
+                $response['error_messages']  = $messages;
+            }
+
+            return $response;
+        } catch (Exception $e) {
+            $response['error_reason']   = 'UnknownError';
+            $response['error_messages'] = 'Oops!! Some unknown error occurred data validation process. Please try again, if error consist then please contact our Administrator.';
+            return $response;
+        }
+    }
+
     public function postMyRequestsList(SS_HTTPRequest $req) {
         //If the request is not post then returns 400 error
         if(!$req->isPOST()) return $this->httpError(400);
@@ -128,6 +157,15 @@ class MyRequestAPI extends Controller {
                         $user_type = 'Trainer';
                     }
 
+                    $status_list = [];
+                    foreach($record->RequestStatus() AS $status_record) {
+                        $status_list[] = [
+                                    'OldStatus' => $status_record->OldStatus, 
+                                    'NewStatus' => $status_record->NewStatus, 
+                                    'ChangeOn'  => date('d-m-Y H:i', strtotime($status_record->Created))
+                        ];
+                    }
+
                     $request_list[] = [
                         'ID'                => $record->ID,
                         'UserType'          => $user_type,
@@ -136,7 +174,8 @@ class MyRequestAPI extends Controller {
                         'Status'            => $record->Status, 
                         'BlockStatus'       => $record->BlockStatus, 
                         'ResponseMessage'   => $record->ResponseMessage, 
-                        'Created'           => date('d-m-Y H:i', strtotime($record->Created))
+                        'Created'           => date('d-m-Y H:i', strtotime($record->Created)), 
+                        'StatusHistory'     => $status_list
                     ];
                 }
             }
@@ -167,6 +206,8 @@ class MyRequestAPI extends Controller {
 
             //First get all passed parameters in different related variables.
             $token          = $req->requestVar('_token');
+            $request_id     = $req->requestVar('request_id');
+            $message        = $req->requestVar('message');
 
             //Define default variables and related json values in json format.
             $response = [   'process_status'    => false,
@@ -180,6 +221,31 @@ class MyRequestAPI extends Controller {
             //If error_reason is not blank then returns json format with validation messages.
             if($response['error_reason'] != '') {
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            //First check the validation of passed data
+            $response = $this->checkDataValidation($req, $response);
+
+            //If error_reason is not blank then returns json format with validation messages.
+            if($response['error_reason'] != '') {
+                return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            $request = AthleteRequest::get()->filter("ID", $request_id)->first();
+            $old_status = $request->Status;
+
+            if($request->Status=='Approved') {
+                $response['error_messages'] = 'This request is already approved.';
+            } else {
+                $request->Status            = 'Approved';
+                $request->ResponseMessage   = $message;
+                $request->write();
+
+                $status = AthleteRequestStatusDetail::create();
+                $status->OldStatus = $old_status;
+                $status->NewStatus = 'Approved';
+                $status->AthleteRequestID = $request->ID;
+                $status->write();
             }
 
             //Set process_status = true and returns success response in json format.
@@ -206,6 +272,8 @@ class MyRequestAPI extends Controller {
 
             //First get all passed parameters in different related variables.
             $token          = $req->requestVar('_token');
+            $request_id     = $req->requestVar('request_id');
+            $message        = $req->requestVar('message');
 
             //Define default variables and related json values in json format.
             $response = [   'process_status'    => false,
@@ -219,6 +287,31 @@ class MyRequestAPI extends Controller {
             //If error_reason is not blank then returns json format with validation messages.
             if($response['error_reason'] != '') {
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            //First check the validation of passed data
+            $response = $this->checkDataValidation($req, $response);
+
+            //If error_reason is not blank then returns json format with validation messages.
+            if($response['error_reason'] != '') {
+                return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            $request = AthleteRequest::get()->filter("ID", $request_id)->first();
+            $old_status = $request->Status;
+
+            if($request->Status=='Rejected') {
+                $response['error_messages'] = 'This request is already Rejected.';
+            } else {
+                $request->Status            = 'Rejected';
+                $request->ResponseMessage   = $message;
+                $request->write();
+
+                $status = AthleteRequestStatusDetail::create();
+                $status->OldStatus = $old_status;
+                $status->NewStatus = 'Rejected';
+                $status->AthleteRequestID = $request->ID;
+                $status->write();
             }
 
             //Set process_status = true and returns success response in json format.
@@ -245,6 +338,8 @@ class MyRequestAPI extends Controller {
 
             //First get all passed parameters in different related variables.
             $token          = $req->requestVar('_token');
+            $request_id     = $req->requestVar('request_id');
+            $message        = $req->requestVar('message');
 
             //Define default variables and related json values in json format.
             $response = [   'process_status'    => false,
@@ -258,6 +353,32 @@ class MyRequestAPI extends Controller {
             //If error_reason is not blank then returns json format with validation messages.
             if($response['error_reason'] != '') {
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            //First check the validation of passed data
+            $response = $this->checkDataValidation($req, $response);
+
+            //If error_reason is not blank then returns json format with validation messages.
+            if($response['error_reason'] != '') {
+                return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            $request = AthleteRequest::get()->filter("ID", $request_id)->first();
+            $old_status = $request->Status;
+
+            if($request->BlockStatus=='Yes') {
+                $response['error_messages'] = 'This request is already Blocked.';
+            } else {
+                $request->Status            = 'Rejected';
+                $request->BlockStatus       = 'Yes';
+                $request->ResponseMessage   = $message;
+                $request->write();
+
+                $status = AthleteRequestStatusDetail::create();
+                $status->OldStatus = $old_status;
+                $status->NewStatus = 'Block';
+                $status->AthleteRequestID = $request->ID;
+                $status->write();
             }
 
             //Set process_status = true and returns success response in json format.
@@ -284,6 +405,8 @@ class MyRequestAPI extends Controller {
 
             //First get all passed parameters in different related variables.
             $token          = $req->requestVar('_token');
+            $request_id     = $req->requestVar('request_id');
+            $message        = $req->requestVar('message');
 
             //Define default variables and related json values in json format.
             $response = [   'process_status'    => false,
@@ -297,6 +420,32 @@ class MyRequestAPI extends Controller {
             //If error_reason is not blank then returns json format with validation messages.
             if($response['error_reason'] != '') {
                 return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            //First check the validation of passed data
+            $response = $this->checkDataValidation($req, $response);
+
+            //If error_reason is not blank then returns json format with validation messages.
+            if($response['error_reason'] != '') {
+                return new SS_HTTPResponse(Convert::array2json($response), 200);
+            }
+
+            $request = AthleteRequest::get()->filter("ID", $request_id)->first();
+            $old_status = $request->Status;
+
+            if($request->AbuseStatus=='Yes') {
+                $response['error_messages'] = 'This request is already Blocked.';
+            } else {
+                $request->Status            = 'Rejected';
+                $request->AbuseStatus       = 'Yes';
+                $request->ResponseMessage   = $message;
+                $request->write();
+
+                $status = AthleteRequestStatusDetail::create();
+                $status->OldStatus = $old_status;
+                $status->NewStatus = 'ReportAbuse';
+                $status->AthleteRequestID = $request->ID;
+                $status->write();
             }
 
             //Set process_status = true and returns success response in json format.

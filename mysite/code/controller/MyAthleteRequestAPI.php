@@ -274,6 +274,12 @@ class MyAthleteRequestAPI extends Controller {
             $request->Status        = 'Waiting';
             $request->write();
 
+            $status = AthleteRequestStatusDetail::create();
+            $status->OldStatus = 'Waiting';
+            $status->NewStatus = 'Waiting';
+            $status->AthleteRequestID = $request->ID;
+            $status->write();
+
             //Set process_status = true and returns success response in json format.
             $response['process_status'] = true;
             return new SS_HTTPResponse(Convert::array2json($response), 200);
@@ -321,6 +327,11 @@ class MyAthleteRequestAPI extends Controller {
             }
 
             $record->delete();
+
+            $query = new SQLQuery();
+            $query->setFrom('AthleteRequestStatusDetail');
+            $query->addWhere("AthleteRequestID = '".$record_id."'");
+            $query->setDelete(true);
 
             //Set process_status = true and returns success response in json format.
             $response['process_status'] = true;
